@@ -23,16 +23,16 @@ Nodos Ros (Publisher - Suscriber) - Comunicación Arduino
 
 *-------------------------------------------------------------------------------------------------------------------------------------------------------*
 
-**NODO "listener_talker_char1.cpp":**
+**NODO "listener_talker_char_1.cpp":**
 *Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_bool.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-A -> bajo-alto), esta letra se publica como un caracter en un topic*
 
-**NODO "listener_talker_char2.cpp":**
+**NODO "listener_talker_char_2.cpp":**
 *Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_int.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
 
-**NODO "listener_talker_char3.cpp":**
+**NODO "listener_talker_char_3.cpp":**
 *Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_float.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
 
-**NODO "listener_char123.cpp":**
+**NODO "listener_char_123.cpp":**
 *Este nodo se encarga de recibir los caracteres que publican los tres nodos anteriores y dependiento de los caracteres que lleguen, mediante un arbol de decisiones se le asigna un valor de 0° a 180° a la variable que se va a publicar (la cual corresponde a los grados que se le envian a un servomotor). Este nodo se comunica con el arduino para enviar la informacion procesada (grados del servo)*
 
 ![alt text](https://github.com/eliandv1911/Nodos_Ros-Arduino/blob/4da2f36b4e77aebddcadc1e05aac8952442dc556/images/arbol_decisiones.png)
@@ -65,21 +65,38 @@ $ sudo gedit .bashrc
 source ~/workspace/devel/setup.bash
 ```
 
-*This will be Italic*
-
-**This will be Bold**
-
-- This will be a list item
-- This will be a list item
-
-1. This will be a numerated list 
-2. This will be a numerated list 
+- *luego en una ventana de terminal estando en "/home" nos dirigimos al workspace y compilamos:*
 
 ```
-this will be a code segment
+$ cd workspace
+
+$ catkin_make
 ```
-> this will be a definition
-<http://url> this will be a web link
-<!--this will a comment-->
-This will a title
---------------
+*-------------------------------------------------------------------------------------------------------------------------------------------------------*
+
+**Ejecución del proyecto:**
+1. *En una ventana de terminal se inicializa el roscore*
+
+```
+$ roscore
+```
+
+2. *Teniendo el arduino conectado al computador y si teniendo identificado el puerto del arduino, se ejecuta el nodo de arduino*
+
+```
+$ rosrun rosserial_python serial_node.py /dev/ttyACM0
+```
+
+3. *Se ejecuta cada uno de los 8 nodos de Ros en una terminal diferente*
+
+```
+$ rosrun paquete_pkg talker_3d
+$ rosrun paquete_pkg listener_talker_bool
+$ rosrun paquete_pkg listener_talker_int
+$ rosrun paquete_pkg listener_talker_float
+$ rosrun paquete_pkg listener_talker_char_1
+$ rosrun paquete_pkg listener_talker_char_2
+$ rosrun paquete_pkg listener_talker_char_3
+$ rosrun paquete_pkg listener_char_123
+```
+
