@@ -100,3 +100,9 @@ $ rosrun paquete_pkg listener_talker_char_3
 $ rosrun paquete_pkg listener_char_123
 ```
 
+4. *Al ejecutar los pasos anteriores podemos ver las conexiones de los nodos ejecutando la siguiente instruccion en otra ventana del terminal:*
+
+```
+$ rosrun rqt_graph rqt_graph
+```
+![alt text](https://github.com/eliandv1911/Nodos_Ros-Arduino/blob/acfa4b49d4b51b779991ef6606279b674600264b/images/nodos_topics_proyecto.png)
