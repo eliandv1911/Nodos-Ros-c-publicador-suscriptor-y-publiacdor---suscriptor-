@@ -100,7 +100,7 @@ $ rosrun paquete_pkg listener_talker_char_3
 $ rosrun paquete_pkg listener_char_123
 ```
 
-4. *Al ejecutar los pasos anteriores podemos ver las conexiones de los nodos ejecutando la siguiente instruccion en otra ventana del terminal:*
+4. *Al ejecutar los pasos anteriores podemos ver las conexiones de los nodos ejecutando la siguiente instrucción en otra ventana del terminal:*
 
 ```
 $ rosrun rqt_graph rqt_graph
