@@ -75,19 +75,19 @@ $ catkin_make
 *-------------------------------------------------------------------------------------------------------------------------------------------------------*
 
 **Ejecución del proyecto:**
-1. *En una ventana de terminal se inicializa el roscore*
+1. *En una ventana de terminal se inicializa el roscore:*
 
 ```
 $ roscore
 ```
 
-2. *Teniendo el arduino conectado al computador y si teniendo identificado el puerto del arduino, se ejecuta el nodo de arduino*
+2. *Teniendo el arduino conectado al computador y teniendo identificado el puerto del arduino, se ejecuta el nodo de arduino:*
 
 ```
 $ rosrun rosserial_python serial_node.py /dev/ttyACM0
 ```
 
-3. *Se ejecuta cada uno de los 8 nodos de Ros en una terminal diferente*
+3. *Se ejecuta cada uno de los 8 nodos de Ros en una terminal diferente:*
 
 ```
 $ rosrun paquete_pkg talker_3d
