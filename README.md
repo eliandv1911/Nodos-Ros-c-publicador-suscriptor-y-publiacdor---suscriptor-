@@ -1,8 +1,8 @@
 Nodos Ros (Publisher - Suscriber) - Comunicación Arduino
 ==============
-*El proyecto consiste en comunicar Ros y Arduino, se utiliza el Arduino uno y se trabaja como un nodo de Ros para la comunicación Serial. El Arduino envia 3 datos (un booleano, un entero y un flotante) por tres topics diferentes, los nodos de Ros creados se encargan de recibir y procesar la información utilizando una funcion de pertenecia para obtener el porcentaje que cada dato tiene a una clase (bajo, medio, alto), si cada dato tiene una pertenencia mayor al 50% a una de las clases se dice que pertenece a esa clase y dependiendo de a que clase pertenezaca cada uno de los tres datos que envia el arduino, se envía un valor en grados diferente al arduino para controlar un servomotor.*
+*El proyecto consiste en comunicar Ros y Arduino por comunicacion serial, se utiliza el Arduino uno y se trabaja como un nodo de Ros para la comunicación Serial. El Arduino envia 3 datos (un booleano, un entero y un flotante) por tres topics diferentes, los nodos de Ros creados se encargan de recibir y procesar la información utilizando una funcion de pertenecia para obtener el porcentaje que cada dato tiene a una clase (bajo, medio, alto), si cada dato tiene una pertenencia mayor al 50% a una de las clases se dice que pertenece a esa clase y dependiendo de a que clase pertenezaca cada uno de los tres datos que envia el arduino, se envía un valor en grados diferente al arduino para controlar un servomotor.*
 
-![alt text](https://github.com/eliandv1911/Nodos_Ros-Arduino/blob/8d2bce3f6bba70efaebd5a2c07391af1d3629d52/images/funcion_pertenencia.png)
+![alt text](https://github.com/eliandv1911/Nodos_Ros-Arduino/blob/4da2f36b4e77aebddcadc1e05aac8952442dc556/images/funcion_pertenencia.png)
 
 
 **NODO "talker_3d.cpp":**
@@ -31,6 +31,18 @@ Nodos Ros (Publisher - Suscriber) - Comunicación Arduino
 
 **NODO "listener_talker_char3.cpp":**
 *Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_float.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
+
+**NODO "listener_char123.cpp":**
+*Este nodo se encarga de recibir los caracteres que publican los tres nodos anteriores y dependiento de los caracteres que lleguen, mediante un arbol de decisiones se le asigna un valor de 0° a 180° a la variable que se va a publicar (la cual corresponde a los grados que se le envian a un servomotor). Este nodo se comunica con el arduino para enviar la informacion procesada (grados del servo)*
+
+![alt text](https://github.com/eliandv1911/Nodos_Ros-Arduino/blob/4da2f36b4e77aebddcadc1e05aac8952442dc556/images/arbol_decisiones.png)
+
+**NODO "serial_node.py" (nodo arduino):**
+*Este nodo corresponde al nodo de arduino, el cual se implementa descargando la biblioteca rosserial de arduino. En el código de arduino se coloca a que topics se va a suscribir y se definen los topics que van a publicar; el nodo de arduino se encarga de tomar los datos boleano, entero y flotante de un interruptor y dos potenciomentros. Igualmente el nodo de arduino recibe un valor entero del topic publicador del nodo "listener_char_123.cpp", el cual contiene la informacion de los grados a los que se va a llevar el servomotor*
+
+**Configuración para implementar el nodo de arduino:**
+
+<https://biorobotics.fi-p.unam.mx/wp-content/uploads/Courses/contrucci%C3%B3n_de_robots_moviles/2017-1/practicas/prac03.pdf>
 
 *This will be Italic*
 
