@@ -23,6 +23,14 @@ Nodos Ros (Publisher - Suscriber) - Comunicación Arduino
 
 *-------------------------------------------------------------------------------------------------------------------------------------------------------*
 
+**NODO "listener_talker_char1.cpp":**
+*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_bool.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-A -> bajo-alto), esta letra se publica como un caracter en un topic*
+
+**NODO "listener_talker_char2.cpp":**
+*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_int.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
+
+**NODO "listener_talker_char3.cpp":**
+*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_float.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
 
 *This will be Italic*
 
