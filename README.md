@@ -40,9 +40,30 @@ Nodos Ros (Publisher - Suscriber) - Comunicación Arduino
 **NODO "serial_node.py" (nodo arduino):**
 *Este nodo corresponde al nodo de arduino, el cual se implementa descargando la biblioteca rosserial de arduino. En el código de arduino se coloca a que topics se va a suscribir y se definen los topics que van a publicar; el nodo de arduino se encarga de tomar los datos boleano, entero y flotante de un interruptor y dos potenciomentros. Igualmente el nodo de arduino recibe un valor entero del topic publicador del nodo "listener_char_123.cpp", el cual contiene la informacion de los grados a los que se va a llevar el servomotor*
 
+*-------------------------------------------------------------------------------------------------------------------------------------------------------*
+
 **Configuración para implementar el nodo de arduino:**
 
 <https://biorobotics.fi-p.unam.mx/wp-content/uploads/Courses/contrucci%C3%B3n_de_robots_moviles/2017-1/practicas/prac03.pdf>
+
+*-------------------------------------------------------------------------------------------------------------------------------------------------------*
+
+**Descargar Paquete:**
+
+*1. El paquete se debe descargar dentro de un workspace; por ejemplo: "/home/workspace/src/paquete_pkg"*
+*2. Utilizando el terminal se abre el archivo ".bashrc" y se agrega el workspace en caso de que no este agregado:*
+
+```
+$ cd
+
+$ sudo gedit .bashrc 
+```
+
+- *Al final del archivo .bashrc se agrega la siguiente linea:*
+
+```
+source ~/workspace/devel/setup.bash
+```
 
 *This will be Italic*
 
