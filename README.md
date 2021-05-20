@@ -106,3 +106,11 @@ $ rosrun paquete_pkg listener_char_123
 $ rosrun rqt_graph rqt_graph
 ```
 ![alt text](https://github.com/eliandv1911/Nodos_Ros-Arduino/blob/acfa4b49d4b51b779991ef6606279b674600264b/images/nodos_topics_proyecto.png)
+
+*-------------------------------------------------------------------------------------------------------------------------------------------------------*
+
+**Autores**
+
+*Daniel Alberto Cruz Porras*
+*Elian Andrés Díaz Vargas*
+*Camilo Andrés Sosa Gutierrez*
