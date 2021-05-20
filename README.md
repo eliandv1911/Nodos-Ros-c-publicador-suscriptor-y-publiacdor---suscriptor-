@@ -112,5 +112,7 @@ $ rosrun rqt_graph rqt_graph
 **Autores**
 
 *Daniel Alberto Cruz Porras*
+
 *Elian Andrés Díaz Vargas*
+
 *Camilo Andrés Sosa Gutierrez*
