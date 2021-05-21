@@ -24,13 +24,13 @@ Nodos Ros (Publisher - Suscriber) - Comunicación Arduino
 *-------------------------------------------------------------------------------------------------------------------------------------------------------*
 
 **NODO "listener_talker_char_1.cpp":**
-*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_bool.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-A -> bajo-alto), esta letra se publica como un caracter en un topic*
+*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_bool.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50% se dice que pertenece a esa clase) asigna una letra que representa a la clase a la cual pertenece (B-A -> bajo-alto), esta letra se publica como un caracter en un topic*
 
 **NODO "listener_talker_char_2.cpp":**
-*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_int.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
+*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_int.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50% se dice que pertenece a esa clase) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
 
 **NODO "listener_talker_char_3.cpp":**
-*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_float.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50%) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
+*Este nodo se encarga de recibir la cadena que viene del nodo "listener_talker_float.cpp", separa la cadena y dependiendo del porcentaje de pertenencia (si para una clase es mayor a 50% se dice que pertenece a esa clase) asigna una letra que representa a la clase a la cual pertenece (B-M-A -> bajo-medio-alto), esta letra se publica como un caracter en un topic*
 
 **NODO "listener_char_123.cpp":**
 *Este nodo se encarga de recibir los caracteres que publican los tres nodos anteriores y dependiento de los caracteres que lleguen, mediante un arbol de decisiones se le asigna un valor de 0° a 180° a la variable que se va a publicar (la cual corresponde a los grados que se le envian a un servomotor). Este nodo se comunica con el arduino para enviar la informacion procesada (grados del servo)*
